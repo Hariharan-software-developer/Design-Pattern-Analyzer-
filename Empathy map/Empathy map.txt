@@ -1,0 +1,88 @@
+Empathy Map: Static Analysis Developer/User
+
+SAYS: 
+
+* "I need a tool that doesn't just find bugs, but guarantees their absence (Soundness)."
+
+
+* "Python's dynamic nature makes it hard to track variable types statically."
+
+
+* "Are there too many false positives in this report?"
+
+
+* "I want to catch security gaps early, before they reach production."
+
+
+-------------------------------------------------------------------------
+THINKS:
+
+* "Is it possible to achieve 100% soundness without making the analysis too slow?"
+
+
+* "I hope this tool supports the latest Python libraries we are using."
+
+
+* "Manual code reviews are taking too long; I need to automate this 'health check'."
+
+
+* "If the analysis is too complex, will other developers actually use it?"
+
+------------------------------------------------------------------------------
+DOES:
+
+* Integrates static analysis into the CI/CD pipeline to vet every commit.
+
+
+* Maps source code to Abstract Syntax Trees (AST) or Control Flow Graphs (CFG).
+
+
+* Researches Abstract Interpretation and formal mathematical models.
+
+
+* Traces data flow from user inputs to critical API calls (Taint Analysis).
+
+---------------------------------------------------------------------------------
+FEELS:
+
+* Frustrated by "silent" runtime errors like null pointer dereferences.
+
+
+* Anxious about missing a critical security vulnerability (e.g., SQL Injection).
+
+
+* Relieved when a tool provides a clear fix for a complex logic bug.
+
+
+* Overwhelmed by long reports containing thousands of warnings.
+
+------------------------------------------------------------------------------------
+
+Pains & Gains
+
+
+PAINS (Challenges):
+
+* High computational overhead of deep static analysis.
+* False positives requiring human judgment and time.
+* Difficulty analyzing "dynamic" Python features (like getattr or eval).
+* Complexity of maintaining a "sound" analyzer as the language evolves.
+
+
+GAINS (Desired Outcomes):
+
+* Drastic reduction in debugging time and maintenance effort.
+* Guaranteed code quality and adherence to safety standards.
+* "Shift-left" security: finding bugs while code is still being written.
+* Higher confidence in the reliability of safety-critical systems.
+
+--------------------------------------------------------------------------------------
+	Any doubts Dm pannunga ...
+
+
+
+
+
+
+
+
