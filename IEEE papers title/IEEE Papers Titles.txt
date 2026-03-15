@@ -1,0 +1,14 @@
+1.Yama: Precise Opcode-Based Data Flow Analysis for Detecting PHP Applications Vulnerabilities
+https://ieeexplore.ieee.org/document/11095739/
+
+2.ForBac: A Static Analysis Approach With Forward and Backward Analysis for Precision in Floating-Point Computations
+https://ieeexplore.ieee.org/document/10990216
+
+3.The Best of Abstract Interpretations (HIGHEST PRIORITY)
+https://dl.acm.org/doi/epdf/10.1145/3704882
+
+4.CoSSJIT: Combining Static Analysis and Speculation in JITCompilers
+https://dl.acm.org/doi/epdf/10.1145/3763149
+
+5.PHPJoy: A Novel Extended Graph-Based PHP Code Analysis Framework (LOWEST PRIORITY)
+https://ieeexplore.ieee.org/document/11181216
