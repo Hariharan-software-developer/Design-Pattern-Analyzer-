@@ -1,0 +1,125 @@
+Sound Static Analysis and High level Languages
+
+------------------------------------------------------------------------------
+1st paper(Author,tite,journal,name,year)
+
+1.Yama: Precise Opcode-Based Data Flow Analysis for Detecting PHP Applications Vulnerabilities (2025)
+
+Key Idea / Approach
+
+Performs context-sensitive interprocedural taint analysis on Zend Opcodes rather than source code. Uses a two-step approach: 1) CFG construction from jump instructions; 2) Forward data flow with type inference.
+
+Advantages
+High precision due to clear control flow in opcodes; effective at identifying zero-day vulnerabilities (38 found).
+
+
+Disadvantages
+Lacks sophisticated constraint-solving; coarse granularity in taint sanitization.
+
+Evaluation Metrics
+True Positive Rate (99.1%); Number of CVE IDs assigned (34).
+
+Data Set
+24 popular GitHub projects with >1,000 stars (Real-world PHP apps).
+
+---------------------------------------------------------------------------
+
+2nd paper(Author,tite,journal,name,year)
+
+
+
+2.ForBac: A Static Analysis Approach With Forward and Backward Analysis for Precision in Floating-Point Computations (2025)
+
+Key Idea / Approach
+Combines forward analysis (tracking error propagation) with backward analysis (calculating minimal input precision required) using Abstract Interpretation on Interval domains.
+
+
+Advantages
+Enhances precision in safety-critical systems; provides a scalable solution for numerical inaccuracies.
+
+
+Disadvantages
+Computational overhead from iterative forward-backward passes.
+
+
+Evaluation Metrics
+Accuracy improvement; scalability across computational contexts.
+
+Data Set
+Standard numerical benchmarks: Newton-Raphson, Jacobi Iteration, and PolyBench/C.
+
+--------------------------------------------------------------------------------------
+
+3rd Paper-> The Best of Abstract Interpretations (POPL 2025)
+
+
+
+Key Idea / Approach
+Proposes a formal logic to define and prove "Best Correct Approximations" (bca). Focuses on the absolute upper bound of precision for any given abstract domain.
+
+
+Advantages
+Provides an absolute upper bound for precision; minimizes false alarms.
+
+
+Disadvantages
+Theoretical complexity; the property of being "the best" is not naturally compositional.
+
+
+Evaluation Metrics
+Proof of validity for abstract triples; precision gain over non-bca methods.
+
+
+Data Set
+Formal logic-based proofs and illustrative program examples.
+
+ --------------------------------------------------------------------------------------
+
+
+4th Paper -> CoSSJIT: Combining Static Analysis and Speculation in JIT Compilers (2025)
+
+Key Idea / Approach
+Integrates expensive static points-to analysis into a JIT compiler. It "speculates" that static results remain valid at runtime, falling back only if checks fail.
+
+Advantages
+Achieves 5.7x improvement in stack allocation; bridges the gap between static precision and run-time specialization.
+
+
+
+Disadvantages
+Requires modifications to production JIT compilers; potential for speculation failure.
+
+
+
+
+Evaluation Metrics
+Performance speedup; stack allocation efficiency; functional correctness.
+
+
+Data Set
+Production Java Virtual Machine and large-scale Java programs.
+
+
+-------------------------------------------------------------------------------------------
+
+5th Paper -> PHPJoy: A Novel Extended Graph-Based PHP Code Analysis Framework (2025)
+
+Key Idea / Approach
+Maps PHP code to an Extended Semantic Graph that merges AST, CFG, and PDG. Uses a specialized graph query framework with a high-performance cache.
+
+
+Advantages
+Reduces runtime analysis overhead by 76.54%; improves semantic edge discovery by 23.76%.
+
+Disadvantages
+Large memory footprint for storing massive semantic graphs (269M+ edges).
+
+
+Evaluation Metrics
+Runtime overhead reduction; semantic edge discovery rate.
+
+Data Set
+333 popular open-source PHP programs.
+
+-------------------------------------------------------------------------------------------
+

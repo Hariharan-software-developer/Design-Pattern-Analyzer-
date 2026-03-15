@@ -1,0 +1,140 @@
+Sound Static Analysis and High level Languages
+
+------------------------------------------------------------------------------
+1st paper(Author,tite,journal,name,year)
+
+1.Yama: Precise Opcode-Based Data Flow Analysis for Detecting PHP Applications Vulnerabilities (2025)
+
+Key Idea / Approach
+
+Performs context-sensitive interprocedural taint analysis on Zend Opcodes rather than source code. Uses a two-step approach: 1) CFG construction from jump instructions; 2) Forward data flow with type inference.
+
+Advantages
+1. Opcodes provide a clearer, more stable control flow than complex source syntax.
+
+
+2. High precision in handling PHP’s dynamic features.
+
+
+3. Effectively identifies zero-day vulnerabilities.
+
+
+Disadvantages
+1. Coarse granularity in taint sanitization.
+
+
+2. Lacks sophisticated constraint solvers for path-specific logic.
+
+
+3. Limited to vulnerabilities detectable via data flow (e.g., struggles with stored XSS).
+
+
+
+
+Evaluation Metrics
+1. True Positive Rate (99.1% in semantic tests).
+
+
+2. Number of Zero-day vulnerabilities found (38).
+
+
+3. Assigned CVE IDs (34).
+
+Data Set
+24 popular GitHub projects with >1,000 stars (Real-world PHP apps).
+
+---------------------------------------------------------------------------
+
+2nd paper(Author,tite,journal,name,year)
+
+
+
+2.ForBac: A Static Analysis Approach With Forward and Backward Analysis for Precision in Floating-Point Computations (2025)
+
+Key Idea / Approach
+Combines forward and backward static analysis using Abstract Interpretation to determine minimal input accuracy for desired output precision.
+
+Advantages
+Enhances precision in safety-critical systems; provides a scalable solution for numerical inaccuracies.
+
+
+Disadvantages
+Computational overhead from iterative forward-backward passes.
+
+
+Evaluation Metrics
+Accuracy improvement; scalability across computational contexts.
+
+
+Data Set
+Standard benchmarks (Newton-Raphson, Jacobi Iteration).
+
+--------------------------------------------------------------------------------------
+
+3rd Paper-> The Best of Abstract Interpretations (POPL 2025)
+
+
+
+
+Investigates "best correct approximations" (bcas) in Abstract Interpretation and provides a program logic to prove an analysis is the best possible one.
+
+
+
+Provides an absolute upper bound for precision; minimizes false alarms.
+
+
+
+Theoretical complexity; the property of being "the best" is not naturally compositional.
+
+
+Proof of validity for abstract triples; precision gain over non-bca methods.
+
+
+
+Formal logic-based proofs and illustrative program examples.
+
+ --------------------------------------------------------------------------------------
+
+
+4th Paper -> CoSSJIT: Combining Static Analysis and Speculation in JIT Compilers (2025)
+
+
+Hybrid approach that enriches static analysis with run-time speculative conditions during Just-In-Time (JIT) compilation.
+
+
+Achieves 5.7x improvement in stack allocation; bridges the gap between static precision and run-time specialization.
+
+
+
+Requires modifications to production JIT compilers; potential for speculation failure.
+
+
+
+Performance speedup; stack allocation efficiency; functional correctness.
+
+
+
+Production Java Virtual Machine and large-scale Java programs.
+
+
+-------------------------------------------------------------------------------------------
+
+5th Paper -> PHPJoy: A Novel Extended Graph-Based PHP Code Analysis Framework (2025)
+
+
+Employs an extended semantic graph for fine-grained program analysis (cross-module and field-level) with a graph query framework.
+
+
+Reduces runtime analysis overhead by 76.54%; improves semantic edge discovery by 23.76%.
+
+
+Large memory footprint for storing massive semantic graphs (269M+ edges).
+
+
+Runtime overhead reduction; semantic edge discovery rate.
+
+
+333 popular open-source PHP programs.
+
+-------------------------------------------------------------------------------------------
+
