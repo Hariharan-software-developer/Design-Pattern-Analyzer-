@@ -1,1 +1,1 @@
-# Static Design pattern Analyzer
+#  Design pattern Analyzer
